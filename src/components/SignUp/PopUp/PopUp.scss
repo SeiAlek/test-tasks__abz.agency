@@ -1,0 +1,64 @@
+@import '../../../style/utils/';
+
+.PopUp {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(#000, 0.3);
+  }
+
+  &__Container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    max-width: 395px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 1rem;
+    transform: translate(-50%, -50%);
+    background-color: $color-bg-primary;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 11;
+  }
+
+  &__Close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background-image: url(/images/close.svg);
+    background-position: center;
+    background-size: contain;
+    background-color: $color-bg-primary;
+    border: 0;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__Title {
+    @extend %heading-secondary;
+  }
+
+  &__Message {
+    padding-top: 2.6rem;
+  }
+
+  &__Button {
+    align-self: flex-end;
+
+    &--primary {
+      margin-top: 34px;
+      max-width: 80px;
+      height: 38px;
+    }
+  }
+}

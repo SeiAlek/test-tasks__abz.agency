@@ -1,0 +1,53 @@
+@import '../../style/';
+
+.UserCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $user-card-width;
+  text-align: center;
+
+  &__Photo {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 3px solid $color-bg-primary;
+    background-image: url(/images/photo-cover.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+  }
+
+  &__Name {
+    @extend %heading-secondary;
+    width: $user-card-width;
+    margin-top: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @extend %tooltips;
+  }
+
+  &__Position {
+    width: $user-card-width;
+    margin-top: 21px;
+    padding: 0;
+    line-height: 24px;
+    text-overflow: ellipsis;
+  }
+
+  &__Link {
+    display:block;
+    width: $user-card-width;
+    margin-top: 12px;
+    color: $color-text-primary;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    outline: none;
+    @extend %tooltips;
+  }
+}

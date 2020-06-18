@@ -1,0 +1,10 @@
+@import '../../style/utils/';
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $footer-height;
+  box-sizing: border-box;
+  border-top: 1px solid $color-border;
+}

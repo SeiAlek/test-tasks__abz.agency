@@ -1,0 +1,75 @@
+@import '../../../style/';
+
+.InputFile {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  max-width: 31rem;
+  width: 100%;
+  height: 2.6rem;
+  padding: 0 1rem;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &__Wrapper {
+    position: relative;
+    height: 2.6rem;
+  }
+
+  &__Custom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: $color-text-secondary;
+    background-color: $color-bg-primary;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &::before {
+      content: "Browse";
+      position: absolute;
+      top: -1px;
+      right: -2px;
+      bottom: -1px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      height: 2.6rem;
+      padding: 0 1rem;
+      font-weight: 600;
+      color: $color-text-primary;
+      background-color: #f8f7f5;
+      border: 1px solid $color-border;
+      border-radius: 0 4px 4px 0;
+      box-sizing: border-box;
+      transition: all 0.3s;
+    }
+
+    &:hover::before {
+      color: $color-text-light;
+      background-color: $color-bg-dark;
+    }
+
+    &::after {
+      content: attr(data-title);
+    }
+
+    &--error {
+      border-color: $color-primary;
+
+      &::before {
+        border-color: $color-primary;
+      }
+    }
+  }
+}

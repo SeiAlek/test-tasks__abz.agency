@@ -1,0 +1,67 @@
+@import './utils';
+
+html,
+body,
+ul,
+h1,
+h2,
+h3,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  color: $color-text-primary;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+input,
+button,
+textarea,
+label {
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+  @extend %heading-primary;
+}
+
+h2 {
+  @extend %heading-secondary;
+}
+
+p {
+  @extend %paragraph;
+  padding: 1.5rem 0 0;
+}
+
+.container {
+  width: 100%;
+  max-width: $screen-max;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $screen-max-mobile) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

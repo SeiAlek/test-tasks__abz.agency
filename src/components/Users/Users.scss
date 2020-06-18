@@ -1,0 +1,26 @@
+@import '../../style/';
+
+.Users {
+  &__List {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+    overflow: hidden;
+
+    @media screen and (max-width: $screen-max-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__Item {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  &__Button {
+    margin: 0 auto;
+  }
+}

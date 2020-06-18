@@ -1,0 +1,20 @@
+@import '../../../style/utils/';
+
+.FieldWrapper {
+  @extend %fields-wrapper;
+
+  &__Label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__Title {
+    padding-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  &__Error {
+    top: 5rem;
+    @extend %field-error-tip;
+  }
+}

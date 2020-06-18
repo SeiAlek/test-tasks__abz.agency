@@ -1,0 +1,26 @@
+@import '../../style/utils/';
+
+.Header {
+  position: sticky;
+  top: 0;
+  background-color: $color-bg-primary;
+  z-index: 1;
+
+  &__Container {
+    display: flex;
+    justify-content: space-between;;
+    align-items: center;
+    height: $header-height;
+    box-sizing: border-box;
+
+    @media screen and (max-width: $screen-max-mobile) {
+      height: $header-height--mobile;
+    }
+  }
+
+  &__LogoLink {
+    position: relative;
+    outline: none;
+    z-index: 20;
+  }
+}

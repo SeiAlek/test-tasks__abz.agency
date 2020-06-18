@@ -1,0 +1,53 @@
+@import '../../../style/utils/';
+
+.InputRadio {
+  @extend %fields-wrapper;
+
+  &__Title {
+    padding-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  &__List {
+    padding-top: 1.5rem;
+  }
+
+  &__Item {
+    padding-top: 0.75rem;
+    list-style: none;
+  }
+
+  &__Field {
+    @extend %visually-hidden;
+
+    & + label::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      box-sizing: border-box;
+      margin-right: 10px;
+      border: 1px solid #adb5bd;
+      border-radius: 50%;
+      transition: border-color 0.3s;
+    }
+
+    &:checked + label::before {
+      border: 4px solid $color-secondary;
+    }
+
+    &--error {
+      border: 1px solid $color-primary;
+    }
+  }
+
+  &__Label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__Error {
+    top: 1rem;
+    @extend %field-error-tip;
+  }
+}
